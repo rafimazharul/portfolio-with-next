@@ -3,8 +3,8 @@ import { SectionHeader } from "@/components/ui/section-header";
 
 const STATS = [
   { value: "1+", label: "Year Experience" },
-  { value: "40+", label: "Projects Built" },
-  { value: "12+", label: "Happy Clients" },
+  { value: "3+", label: "Featured Projects" },
+  { value: "100%", label: "Dedication" },
 ];
 
 const EDUCATION = [
@@ -46,17 +46,13 @@ export function About() {
           <div>
             <div className="space-y-4 text-muted-foreground text-base leading-relaxed max-w-xl">
               <p>
-                I am a passionate <span className="text-foreground font-semibold">Frontend-focused MERN Stack Developer</span> with 
-                a deep love for building clean, scalable, and impactful web applications.
+                I&apos;m <span className="text-foreground font-semibold">Mazharul Islam Rafi</span>, a frontend web developer focused on creating intuitive interfaces and polished digital experiences.
               </p>
               <p>
-                With over a year of experience, I have honed my skills in 
-                <span className="text-primary font-medium"> React, Next.js, and TypeScript</span>. 
-                I bridge the gap between complex backend logic and intuitive, aesthetic user interfaces.
+                I have hands-on experience with <span className="text-primary font-medium">JavaScript, React.js, and modern frontend workflows</span>. I enjoy solving problems efficiently and turning designs into responsive, user-friendly websites.
               </p>
               <p>
-                My approach is centered around <span className="text-foreground font-semibold">reusable architecture</span> and 
-                clean code — ensuring every product I build is powerful, maintainable, and developer-friendly.
+                I&apos;m also expanding my backend knowledge with <span className="text-foreground font-semibold">Node.js, Express.js, and MongoDB</span> as I continue building toward a stronger MERN stack foundation.
               </p>
             </div>
 

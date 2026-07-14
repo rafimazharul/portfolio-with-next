@@ -23,6 +23,8 @@ import { SectionHeader } from "@/components/ui/section-header";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
+  number: z.string().min(8, { message: "Please enter a valid mobile number." }),
+  subject: z.string().min(3, { message: "Please enter an email subject." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
@@ -34,6 +36,8 @@ export function Contact() {
     defaultValues: {
       name: "",
       email: "",
+      number: "",
+      subject: "",
       message: "",
     },
   });
@@ -93,7 +97,7 @@ export function Contact() {
                     <Field data-invalid={!!errors.name}>
                       <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Full Name</FieldLabel>
                       <Input 
-                        placeholder="John Doe"
+                        placeholder="Mazharul Islam Rafi"
                         {...form.register("name")}
                         className="bg-background border-border rounded-lg h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
                       />
@@ -105,7 +109,7 @@ export function Contact() {
                       <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Email Address</FieldLabel>
                       <Input 
                         type="email" 
-                        placeholder="john@example.com"
+                        placeholder="you@example.com"
                         {...form.register("email")}
                         className="bg-background border-border rounded-lg h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
                       />
@@ -114,10 +118,35 @@ export function Contact() {
                       </FieldError>
                     </Field>
                   </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <Field data-invalid={!!errors.number}>
+                      <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Mobile Number</FieldLabel>
+                      <Input 
+                        type="tel"
+                        placeholder="01700000000"
+                        {...form.register("number")}
+                        className="bg-background border-border rounded-lg h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
+                      />
+                      <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
+                        {errors.number?.message}
+                      </FieldError>
+                    </Field>
+                    <Field data-invalid={!!errors.subject}>
+                      <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Email Subject</FieldLabel>
+                      <Input 
+                        placeholder="Project Inquiry"
+                        {...form.register("subject")}
+                        className="bg-background border-border rounded-lg h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
+                      />
+                      <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
+                        {errors.subject?.message}
+                      </FieldError>
+                    </Field>
+                  </div>
                   <Field data-invalid={!!errors.message}>
-                    <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Message Body</FieldLabel>
+                    <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Your Message</FieldLabel>
                     <Textarea 
-                      placeholder="How can I help you?"
+                      placeholder="Tell me about your project or idea"
                       {...form.register("message")}
                       className="h-32 bg-background border-border rounded-lg px-4 py-3 focus:ring-1 focus:ring-primary/30 resize-none text-base font-bold"
                     />
@@ -157,8 +186,8 @@ export function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Email</p>
-                <a href="mailto:nurullahasan.dev@gmail.com" className="text-sm font-black text-foreground hover:text-primary transition-colors block truncate leading-tight">
-                  nurullahasan.dev@gmail.com
+                <a href="mailto:rafimazharul@gmail.com" className="text-sm font-black text-foreground hover:text-primary transition-colors block truncate leading-tight">
+                  rafimazharul@gmail.com
                 </a>
               </div>
             </div>
@@ -171,8 +200,8 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Phone</p>
-                  <a href="tel:+8801750974716" className="text-sm font-black text-foreground hover:text-primary transition-colors block leading-tight">
-                    +8801750974716
+                  <a href="tel:+8801731512984" className="text-sm font-black text-foreground hover:text-primary transition-colors block leading-tight">
+                    +8801731512984
                   </a>
                 </div>
               </div>
@@ -182,7 +211,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Location</p>
-                  <p className="text-sm font-black text-foreground leading-tight">Dhaka, Bangladesh</p>
+                  <p className="text-sm font-black text-foreground leading-tight">Bangladesh</p>
                 </div>
               </div>
             </div>

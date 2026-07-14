@@ -1,28 +1,28 @@
 "use client";
 
 import * as React from "react";
-import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from "@/components/ui/icons";
+import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon, FacebookIcon } from "@/components/ui/icons";
 
 const SOCIALS = [
-  { 
-    label: "GitHub", 
-    href: "https://github.com/nurulla-hasan",
-    icon: GithubIcon
+  {
+    label: "GitHub",
+    href: "https://github.com/rafimazharul",
+    icon: GithubIcon,
   },
-  { 
-    label: "LinkedIn", 
-    href: "https://linkedin.com/in/nurulla-hasan",
-    icon: LinkedinIcon
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/rafimazharul/",
+    icon: LinkedinIcon,
   },
-  { 
-    label: "Twitter", 
-    href: "https://x.com",
-    icon: XIcon
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/rafi_lostinthoughts/",
+    icon: InstagramIcon,
   },
-  { 
-    label: "Instagram", 
-    href: "https://instagram.com",
-    icon: InstagramIcon
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/rafimazharul",
+    icon: FacebookIcon,
   },
 ];
 

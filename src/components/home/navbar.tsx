@@ -25,17 +25,16 @@ import {
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
-  { name: "Skills", href: "/#skills" },
+  { name: "Services", href: "/#services" },
   { name: "Projects", href: "/#projects" },
-  { name: "Experience", href: "/#experience" },
   { name: "Contact", href: "/#contact" },
 ];
 
 const socialLinks = [
-  { icon: GithubIcon, href: "https://github.com/nurulla-hasan" },
-  { icon: LinkedinIcon, href: "https://linkedin.com/in/nurulla-hasan" },
-  { icon: XIcon, href: "#" },
-  { icon: InstagramIcon, href: "#" },
+  { icon: GithubIcon, href: "https://github.com/rafimazharul" },
+  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/rafimazharul/" },
+  { icon: InstagramIcon, href: "https://www.instagram.com/rafi_lostinthoughts/" },
+  { icon: XIcon, href: "https://www.x.com/rafimazharul" },
 ];
 
 export function Navbar() {

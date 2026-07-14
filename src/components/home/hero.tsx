@@ -7,10 +7,9 @@ import { Typewriter } from "@/components/ui/typewriter";
 import Link from "next/link";
 
 const ROLES = [
+  "Frontend Developer",
+  "Web Developer",
   "MERN Stack Developer",
-  "Frontend Architecture Specialist",
-  "Dashboard Systems Expert",
-  "Scalable UI Architect",
 ];
 
 export function Hero() {
@@ -42,7 +41,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 border bg-muted/30 px-4 py-2 rounded-lg">
             <span className="h-2.5 w-2.5 bg-primary shadow-[0_0_14px_var(--color-primary)] animate-pulse" />
             <div className="flex items-center text-xs sm:text-sm font-medium tracking-wide text-foreground/85">
-              <span>Frontend-Focused </span>
+              <span>Frontend Web Developer </span>
               <Typewriter 
                 texts={ROLES} 
                 className="ml-1.5 font-bold text-primary"
@@ -54,10 +53,10 @@ export function Hero() {
           {/* Heading */}
           <div className="mt-6 space-y-1">
             <h1 className="text-[25px] font-bold leading-tight md:leading-22 text-foreground sm:text-[30px] md:text-[40px] xl:text-[50px]">
-              Hi, I&apos;m
+              Hello, It&apos;s Me
             </h1>
             <h2 className="text-[40px] font-bold leading-tight md:leading-22 sm:text-[56px] md:text-[74px] xl:text-[86px]">
-              <span className="text-primary">Rafi</span>
+              <span className="text-primary">Mazharul Islam Rafi</span>
             </h2>
           </div>
 
@@ -76,11 +75,7 @@ export function Hero() {
 
           {/* Description */}
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
-            I specialize in building API-driven web applications and 
-            <span className="text-foreground font-semibold"> dashboard systems </span> 
-            using React, Next.js, and TypeScript. Expert in 
-            <span className="text-primary font-medium"> reusable architecture </span> 
-            and modern data patterns.
+            I am a driven frontend web developer skilled in crafting intuitive user interfaces and turning design ideas into memorable digital experiences. I love building responsive, polished websites and continuously expanding my MERN stack skills.
           </p>
 
           {/* Buttons */}

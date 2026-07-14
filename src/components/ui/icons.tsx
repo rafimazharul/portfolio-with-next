@@ -76,6 +76,23 @@ export const InstagramIcon = (props: LucideProps) => (
   </svg>
 );
 
+export const FacebookIcon = (props: LucideProps) => (
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
 type NHLogoProps = React.SVGProps<SVGSVGElement>;
 
 export const NHLogo = ({ className = "", ...props }: NHLogoProps) => {
@@ -114,33 +131,44 @@ export const NHLogo = ({ className = "", ...props }: NHLogoProps) => {
         />
       ))}
 
-      {/* Slanted (Italic) Monogram Group */}
+      {/* Slanted (Italic) MIR Monogram Group (replaced NH -> MIR) */}
       <g>
-        {/* Primary Color Accent Paths (N left leg + H middle + H right leg) */}
-        <path
-          d="M25 70V30 M50 50H75 M75 30V70"
-          stroke="var(--primary)"
-          strokeWidth="8"
-          strokeLinecap="round"
-          strokeLinejoin="miter"
-          fill="none"
-          style={{ fill: "none", opacity: 1 }}
-        />
+        {/* Accent strokes to preserve original color treatment */}
+        <text
+          x="25"
+          y="62"
+          fill="var(--primary)"
+          fontSize="28"
+          fontWeight={700}
+          style={{
+            fontFamily: 'Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial',
+            fontStyle: 'italic',
+            letterSpacing: 1,
+          }}
+        >
+          MIR
+        </text>
 
-        {/* Main NH Monogram Path (N Diagonal + N Right leg) */}
-        <path
-          d="M25 30L50 70V30"
-          stroke="currentColor"
-          strokeWidth="8"
-          strokeLinecap="round"
-          strokeLinejoin="miter"
-          fill="none"
-          style={{ fill: "none", opacity: 1 }}
-        />
+        {/* Subtle main fill using currentColor for theme-aware rendering */}
+        <text
+          x="25"
+          y="62"
+          fill="currentColor"
+          fontSize="28"
+          fontWeight={700}
+          style={{
+            fontFamily: 'Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial',
+            fontStyle: 'italic',
+            mixBlendMode: 'multiply',
+            opacity: 0.95,
+          }}
+        >
+          MIR
+        </text>
 
-        {/* Tech Node/Dot at the end */}
+        {/* Tech Node/Dot at the end (kept for visual continuity) */}
         <circle cx="75" cy="50" r="4" fill="var(--primary)">
-          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinity" />
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
         </circle>
       </g>
 

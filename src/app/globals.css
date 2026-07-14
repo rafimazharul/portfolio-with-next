@@ -53,8 +53,9 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(0.99 0.002 240);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(74.631% 0.19277 152.866);
-  --primary-foreground: oklch(0.982 0.018 155.826);
+  --primary: #FF4C4C;
+  --primary-rgb: 255, 76, 76;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.97 0 0);
@@ -73,8 +74,8 @@
   --radius: 0.6rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.627 0.194 149.214);
-  --sidebar-primary-foreground: oklch(0.982 0.018 155.826);
+  --sidebar-primary: #FF4C4C;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
@@ -90,8 +91,9 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(75.12% 0.12825 194.807);
-  --primary-foreground: oklch(0.982 0.018 155.826);
+  --primary: #FF4C4C;
+  --primary-rgb: 255, 76, 76;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -109,8 +111,8 @@
   --chart-5: oklch(0.455 0.188 13.697);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.723 0.219 149.579);
-  --sidebar-primary-foreground: oklch(0.982 0.018 155.826);
+  --sidebar-primary: #FF4C4C;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
@@ -153,11 +155,11 @@
 
 @layer utilities {
   .premium-hover {
-    @apply transition-all duration-300 hover:shadow-[0px_5px_10px_-1px_#00c964] hover:shadow-primary hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-[0px_5px_10px_-1px_#FF4C4C] hover:shadow-primary hover:-translate-y-1;
   }
 }
 @layer utilities {
   .premium-shadow {
-    @apply transition-all duration-300 shadow-[0px_5px_10px_-1px_#00c964] shadow-primary;
+    @apply transition-all duration-300 shadow-[0px_5px_10px_-1px_#FF4C4C] shadow-primary;
   }
 }

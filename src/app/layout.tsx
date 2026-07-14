@@ -15,11 +15,11 @@ const cagliostro = Cagliostro({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nurulla-hasan-portfolio-pink.vercel.app"),
   title: {
-    default: "Rafi | Frontend-Focused MERN Stack Developer",
-    template: "%s | Rafi",
+    default: "Mazharul Islam Rafi | Frontend Web Developer",
+    template: "%s | Mazharul Islam Rafi",
   },
   description:
-    "Rafi — Frontend-Focused MERN Stack Developer specializing in building modern, high-performance web applications with React, Next.js, TypeScript, and Node.js. Explore my projects and get in touch.",
+    "Mazharul Islam Rafi — Frontend web developer crafting intuitive interfaces, polished websites, and modern digital experiences with React, Next.js, and the MERN stack.",
   keywords: [
     "Rafi",
     "Rafi Portfolio",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Next.js Developer",
     "TypeScript Developer",
     "JavaScript Developer",
-    "Node.js Developer",https://opencode.ai/zen/v1/chat/completions
+    "Node.js Developer",
     "MongoDB Developer",
     "Full Stack Developer",
     "Web Developer Bangladesh",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "UI Developer",
     "Frontend Engineer",
   ],
-  authors: [{ name: "Rafi", url: "https://nurulla-hasan-portfolio-pink.vercel.app" }],
+  authors: [{ name: "Rafi", url: "https://mazharul.bro.bd" }],
   creator: "Rafi",
   publisher: "Rafi",
   category: "Technology",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nurulla-hasan-portfolio-pink.vercel.app",
+    url: "https://mazharul.bro.b",
     siteName: "Rafi Portfolio",
     title: "Rafi | Frontend-Focused MERN Stack Developer",
     description:
