@@ -19,7 +19,7 @@ import {
   LinkedinIcon,
   XIcon,
   InstagramIcon,
-  NHLogo,
+  MIRLogo,
 } from "@/components/ui/icons";
 
 const navLinks = [
@@ -101,10 +101,11 @@ export function Navbar() {
         {/* Logo */}
         <Link 
           href="/" 
+          scroll={false}
           onClick={(e) => handleNavLinkClick(e, "/")}
           className="group transition-all duration-300 shrink-0"
         >
-          <NHLogo className="text-foreground h-8 md:h-12 w-auto transition-all group-hover:scale-110" />
+          <MIRLogo className="text-foreground h-8 md:h-12 w-auto transition-all group-hover:scale-110" />
         </Link>
 
         {/* Navigation Links (Desktop) */}
@@ -138,7 +139,7 @@ export function Navbar() {
           <div className="hidden lg:block">
             <ModeToggle variant="nav" />
           </div>
-          <Link href="/resume">
+          <Link href="/resume" scroll={false}>
             <Button variant="hero" className="hidden md:flex transition-all">
               <Send className="w-4 h-4 mr-2 fill-current" />
               Resume
@@ -163,7 +164,7 @@ export function Navbar() {
 
               <SheetHeader className="p-6 pb-4 text-left border-b border-border/50 relative z-10 flex flex-row items-center justify-between">
                 <SheetTitle className="text-lg font-bold uppercase tracking-widest flex items-center gap-2">
-                  <NHLogo className="w-7 h-7" />
+                  <MIRLogo className="w-7 h-7" />
                 </SheetTitle>
                 <ModeToggle variant="nav" size="icon-sm" />
                 <SheetDescription className="sr-only">
@@ -179,6 +180,7 @@ export function Navbar() {
                       <Link
                         key={link.name}
                         href={link.href}
+                        scroll={false}
                         onClick={(e) => {
                           setIsOpen(false);
                           handleNavLinkClick(e, link.href);

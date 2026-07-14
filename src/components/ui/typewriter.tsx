@@ -21,30 +21,34 @@ export function Typewriter({
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      const fullText = texts[currentTextIndex];
+    const fullText = texts[currentTextIndex];
+    let timeout: ReturnType<typeof setTimeout>;
 
-      if (!isDeleting) {
-        // Typing
-        setCurrentText(fullText.substring(0, currentText.length + 1));
-        
-        if (currentText === fullText) {
-          // Finished typing, wait before deleting
-          setTimeout(() => setIsDeleting(true), pause);
-        }
+    const typingSpeed = isDeleting ? delay / 2 : delay;
+
+    if (!isDeleting) {
+      if (currentText === fullText) {
+        timeout = setTimeout(() => setIsDeleting(true), pause);
       } else {
-        // Deleting
-        setCurrentText(fullText.substring(0, currentText.length - 1));
-        
-        if (currentText === "") {
+        timeout = setTimeout(() => {
+          setCurrentText(fullText.substring(0, currentText.length + 1));
+        }, typingSpeed);
+      }
+    } else {
+      if (currentText === "") {
+        timeout = setTimeout(() => {
           setIsDeleting(false);
           setCurrentTextIndex((prev) => (prev + 1) % texts.length);
-        }
+        }, delay);
+      } else {
+        timeout = setTimeout(() => {
+          setCurrentText(fullText.substring(0, currentText.length - 1));
+        }, typingSpeed);
       }
-    }, isDeleting ? delay / 2 : delay);
+    }
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentTextIndex, texts, delay, pause]);
+  }, [currentText, currentTextIndex, isDeleting, texts, delay, pause]);
 
   return (
     <span className={className}>

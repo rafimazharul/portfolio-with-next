@@ -93,9 +93,9 @@ export const FacebookIcon = (props: LucideProps) => (
   </svg>
 );
 
-type NHLogoProps = React.SVGProps<SVGSVGElement>;
+type MIRLogoProps = React.SVGProps<SVGSVGElement>;
 
-export const NHLogo = ({ className = "", ...props }: NHLogoProps) => {
+export const MIRLogo = ({ className = "", ...props }: MIRLogoProps) => {
 
   return (
     <svg

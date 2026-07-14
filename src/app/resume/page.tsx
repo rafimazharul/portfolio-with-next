@@ -248,8 +248,23 @@ export default function ResumePage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-sm font-bold text-foreground">Diploma in Engineering</h3>
-                    <p className="text-xs text-muted-foreground font-bold">Dinajpur Polytechnic Institute</p>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">2021–2024</p>
+                    <p className="text-xs text-muted-foreground font-bold">Hajigonj Polytechnic Institute</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">2018-2022</p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Education */}
+              <section>
+                <h2 className="text-base font-black uppercase tracking-widest mb-5 flex items-center gap-2">
+                  <GraduationCap className="w-4 h-4 text-primary" />
+                  Education
+                </h2>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-sm font-bold text-foreground">BSc in Engineering</h3>
+                    <p className="text-xs text-muted-foreground font-bold">World University of Bangladesh</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">2024-present</p>
                   </div>
                 </div>
               </section>
@@ -262,7 +277,7 @@ export default function ResumePage() {
                 </h2>
                 <div className="space-y-4">
                   <p className="text-sm text-muted-foreground font-medium">
-                    Programming Hero — Level 1 completed, currently continuing Level 2
+                    Programming Hero — Level 1 completed, currently continuing Phitron.io
                   </p>
                 </div>
               </section>
